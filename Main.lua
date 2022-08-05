@@ -1,1 +1,1 @@
-local Library = game:HttpGet('https://raw.githubusercontent.com/protazioooooo/Spinela/main/Library.lua?token=GHSAT0AAAAAABXLQUP4VUZYJ66EABUJVUM2YXNUZGA', true)
+local Library = game:HttpGet('https://raw.githubusercontent.com/protazioooooo/Spinela/main/Library.lua', true)

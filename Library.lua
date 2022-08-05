@@ -1,3 +1,3 @@
-function Gui()
-    
-end
+local Settings = {
+    ['GuiKeyBind'] = Enum.KeyCode.RightShift;
+}
