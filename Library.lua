@@ -14,7 +14,6 @@ local function Random()
     return table.concat(String)
 end
 
-function Initialization()
     local ScreenGui = Instance.new('ScreenGui', CoreGui)
     local Welcome = Instance.new('TextLabel', ScreenGui)
     local Effect = Instance.new('BlurEffect', Lighting)
@@ -57,4 +56,3 @@ function Initialization()
             end
         end)
     end)()
-end
