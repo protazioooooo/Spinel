@@ -32,6 +32,7 @@ function Library:Initialization()
     Welcome.TextColor3 = Color3.fromRGB(255, 255, 255)
     Welcome.TextSize = 80
     Welcome.Font = Enum.Font.Nunito
+    Welcome.TextTransparency = 0
     Welcome.BackgroundTransparency = 0
     Welcome.Active = false
 
