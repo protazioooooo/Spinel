@@ -44,7 +44,7 @@ function Library:Initialization()
         TweenService:Create(Effect, TweenInfo.new(1), {Size = 20})
         task.wait(4)
         TweenService:Create(Welcome, TweenInfo.new(1), {TextTransparency = 0})
-        TweenService:Create(Effect, TweenInfo.new(1), {Size = 20})
+        TweenService:Create(Effect, TweenInfo.new(1), {Size = 0})
     end)
 end
 
