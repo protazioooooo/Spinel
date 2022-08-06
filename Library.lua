@@ -14,12 +14,13 @@ local function Random()
     return table.concat(String)
 end
 
+function Initialization()
     local ScreenGui = Instance.new('ScreenGui', CoreGui)
     local Welcome = Instance.new('TextLabel', ScreenGui)
     local Effect = Instance.new('BlurEffect', Lighting)
 
     ScreenGui.Name = Random()
-    ScreenGui.DisplayOrder = 100
+    ScreenGui.DisplayOrder = 999
     ScreenGui.ResetOnSpawn = false
 
     Welcome.Name = Random()
@@ -56,3 +57,6 @@ end
             end
         end)
     end)()
+end
+
+Initialization()
