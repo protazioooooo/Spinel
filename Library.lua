@@ -25,27 +25,30 @@ function Library:Initialization()
     ScreenGui.ResetOnSpawn = false
 
     Welcome.Name = Random()
-    Welcome.AnchorPoint = Vector2.new(0.5, 0.5)
     Welcome.Position = UDim2.new(0.5, 0, 0.5, 0)
+    Welcome.AnchorPoint = Vector2.new(0.5, 0.5)
     Welcome.Size = UDim2.new(0, 800, 0, 100)
     Welcome.Text = 'Welcome, matheus!'
     Welcome.TextColor3 = Color3.fromRGB(255, 255, 255)
     Welcome.TextSize = 80
     Welcome.Font = Enum.Font.Nunito
-    Welcome.TextTransparency = 0
-    Welcome.BackgroundTransparency = 0
+    Welcome.TextTransparency = 1
+    Welcome.BackgroundTransparency = 1
     Welcome.Active = false
 
     Effect.Name = Random()
     Effect.Size = 0
     Effect.Enabled = true
 
+    local One = TweenService:Create(Effect, TweenInfo.new(1), {Size = 15})
+    local Two = TweenService:Create(Welcome, TweenInfo.new(1), {TextTransparency = 0})
     coroutine.wrap(function()
-        TweenService:Create(Welcome, TweenInfo.new(1), {TextTransparency = 1})
-        TweenService:Create(Effect, TweenInfo.new(1), {Size = 20})
-        task.wait(4)
-        TweenService:Create(Welcome, TweenInfo.new(1), {TextTransparency = 0})
-        TweenService:Create(Effect, TweenInfo.new(1), {Size = 0})
+        One:Play()
+        One.Completed:Connect(function(Playback)
+            if Playback == Enum.PlaybackState.Completed then
+                Two:Play()
+            end
+        end)
     end)
 end
 
