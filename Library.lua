@@ -1,3 +1,4 @@
+local TweenService = game:GetService('TweenService')
 local Lighting = game:GetService('Lighting')
 local CoreGui = game:GetService('CoreGui')
 local Library = {}
@@ -31,11 +32,20 @@ function Library:Initialization()
     Welcome.TextColor3 = Color3.fromRGB(255, 255, 255)
     Welcome.TextSize = 80
     Welcome.Font = Enum.Font.Nunito
-    Welcome.BackgroundTransparency = 1
+    Welcome.BackgroundTransparency = 0
     Welcome.Active = false
 
     Effect.Name = Random()
-    Effect.Size = 20
+    Effect.Size = 0
+    Effect.Enabled = true
+
+    coroutine.wrap(function()
+        TweenService:Create(Welcome, TweenInfo.new(1), {TextTransparency = 1})
+        TweenService:Create(Effect, TweenInfo.new(1), {Size = 20})
+        task.wait(4)
+        TweenService:Create(Welcome, TweenInfo.new(1), {TextTransparency = 0})
+        TweenService:Create(Effect, TweenInfo.new(1), {Size = 20})
+    end)
 end
 
 return Library
