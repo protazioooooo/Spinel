@@ -1,1 +1,1 @@
-loadstring(game:HttpGet('https://raw.githubusercontent.com/protazioooooo/Spinel/main/Main.lua'), true)
+prin
