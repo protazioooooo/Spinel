@@ -46,7 +46,7 @@ function Initialization()
 
     coroutine.wrap(function()
         Starter:Play()
-        task.wait(6)
+        task.wait(4)
         Terminator:Play()
         Terminator.Completed:Connect(function(Playback)
             if Playback == Enum.PlaybackState.Completed then
