@@ -36,6 +36,6 @@ function Library:Initialization()
 
     Effect.Name = Random()
     Effect.Size = 20
-
-    return Library
 end
+
+return Library
