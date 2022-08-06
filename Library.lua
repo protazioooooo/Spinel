@@ -20,7 +20,7 @@ function Initialization()
     local Effect = Instance.new('BlurEffect', Lighting)
 
     ScreenGui.Name = Random()
-    ScreenGui.SelectionGroup = 100
+    ScreenGui.DisplayOrder = 100
     ScreenGui.ResetOnSpawn = false
 
     Welcome.Name = Random()
