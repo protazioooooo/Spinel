@@ -26,8 +26,8 @@ function Initialization()
     Welcome.Name = Random()
     Welcome.Text = 'Welcome, matheus!'
     Welcome.Size = UDim2.new(0, 800, 0, 100)
-    Welcome.Position = UDim2.new(0.5, 0, 0.5, 0)
     Welcome.AnchorPoint = Vector2.new(0.5, 0.5)
+    Welcome.Position = UDim2.new(0.5, 0, 0.5, 0)
     Welcome.TextColor3 = Color3.fromRGB(250, 250, 250)
     Welcome.BackgroundTransparency = 1
     Welcome.TextTransparency = 1
@@ -37,16 +37,25 @@ function Initialization()
 
     Effect.Name = Random()
     Effect.Size = 15
-    Effect.Enabled = false
+    Effect.Enabled = true
 
-    local Informations = TweenInfo.new(3, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0)
+    local Informations = TweenInfo.new(1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0)
     local Starter = TweenService:Create(Welcome, Informations, {TextTransparency = 0})
     local Terminator = TweenService:Create(Welcome, Informations, {TextTransparency = 1})
-    
+    local Finisher = TweenService:Create(Effect, Informations, {Size = 0})
+
     coroutine.wrap(function()
         Starter:Play()
-        task.wait(3)
+        task.wait(6)
         Terminator:Play()
+        Terminator.Completed:Connect(function(Playback)
+            if Playback == Enum.PlaybackState.Completed then
+               Finisher:Play()
+               task.wait(1)
+               ScreenGui:Destroy()
+               Effect:Destroy()
+            end
+        end)
     end)()
 end
 
