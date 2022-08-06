@@ -42,10 +42,12 @@ function Initialization()
     local Informations = TweenInfo.new(3, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0)
     local Starter = TweenService:Create(Welcome, Informations, {TextTransparency = 0})
     local Terminator = TweenService:Create(Welcome, Informations, {TextTransparency = 1})
-
+    
     coroutine.wrap(function()
         Starter:Play()
         task.wait(3)
         Terminator:Play()
     end)()
 end
+
+Initialization()
