@@ -58,5 +58,3 @@ function Initialization()
         end)
     end)()
 end
-
-Initialization()
