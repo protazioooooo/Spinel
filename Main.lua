@@ -1,2 +1,2 @@
-local Library = game:HttpGet('https://raw.githubusercontent.com/protazioooooo/Spinela/main/Library.lua', true)
+local Library = game:HttpGet('https://raw.githubusercontent.com/protazioooooo/Spinel/main/Main.lua', true)
 Library.Initialization()
