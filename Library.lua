@@ -25,7 +25,7 @@ function Library:CreateMain()
     ScreenGui.ResetOnSpawn = false
 
     Main.Name = Random()
-    Main.Position = UDim2.new(0, 0, 0.22, 0)
+    Main.Position = UDim2.new(0, 0, 0.21, 0)
     Main.Size = UDim2.new(0, 260, 0, 360)
     Main.Image = 'rbxassetid://10539209076'
     Main.BackgroundTransparency = 1
@@ -46,7 +46,7 @@ function Library:CreateMain()
         local Inside = Instance.new('ImageLabel', Main)
 
         Inside.Name = Random()
-        Inside.Position = UDim2.new(0, 0, 0.167, 0)
+        Inside.Position = UDim2.new(0, 0, 0.164, 0)
         Inside.Size = UDim2.new(0, 260, 0, 60)
         Inside.Image = 'rbxassetid://10539235345'
         Inside.BackgroundTransparency = 1
@@ -57,7 +57,7 @@ function Library:CreateMain()
         local Inside = Instance.new('ImageLabel', Main)
 
         Inside.Name = Random()
-        Inside.Position = UDim2.new(0, 0, 0.333, 0)
+        Inside.Position = UDim2.new(0, 0, 0.331, 0)
         Inside.Size = UDim2.new(0, 260, 0, 60)
         Inside.Image = 'rbxassetid://10539235345'
         Inside.BackgroundTransparency = 1
@@ -68,7 +68,7 @@ function Library:CreateMain()
         local Inside = Instance.new('ImageLabel', Main)
 
         Inside.Name = Random()
-        Inside.Position = UDim2.new(0, 0, 0.5, 0)
+        Inside.Position = UDim2.new(0, 0, 0.497, 0)
         Inside.Size = UDim2.new(0, 260, 0, 60)
         Inside.Image = 'rbxassetid://10539235345'
         Inside.BackgroundTransparency = 1
@@ -79,7 +79,7 @@ function Library:CreateMain()
         local Inside = Instance.new('ImageLabel', Main)
 
         Inside.Name = Random()
-        Inside.Position = UDim2.new(0, 0, 0.667, 0)
+        Inside.Position = UDim2.new(0, 0, 0.664, 0)
         Inside.Size = UDim2.new(0, 260, 0, 60)
         Inside.Image = 'rbxassetid://10539235345'
         Inside.BackgroundTransparency = 1
