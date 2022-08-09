@@ -14,7 +14,7 @@ local function Random()
     return table.concat(String)
 end
 
-function Library:Main()
+function Library:CreateMain()
     local Buttons = {}
 
     local ScreenGui = Instance.new('ScreenGui', CoreGui)
@@ -31,7 +31,7 @@ function Library:Main()
     Main.BackgroundTransparency = 1
     Main.Active = false
 
-    function Buttons:AimAssist()
+    function Buttons:CreateAimAssist()
         local Top = Instance.new('ImageLabel', Main)
         
         Top.Name = Random()
@@ -42,7 +42,7 @@ function Library:Main()
         Top.Active = false
     end
 
-    function Buttons:Utilities()
+    function Buttons:CreateUtilities()
         local Inside = Instance.new('ImageLabel', Main)
 
         Inside.Name = Random()
@@ -53,7 +53,7 @@ function Library:Main()
         Inside.Active = false
     end
 
-    function Buttons:Teleports()
+    function Buttons:CreateTeleports()
         local Inside = Instance.new('ImageLabel', Main)
 
         Inside.Name = Random()
@@ -64,7 +64,7 @@ function Library:Main()
         Inside.Active = false
     end
 
-    function Buttons:Movements()
+    function Buttons:CreateMovements()
         local Inside = Instance.new('ImageLabel', Main)
 
         Inside.Name = Random()
@@ -75,7 +75,7 @@ function Library:Main()
         Inside.Active = false
     end
 
-    function Buttons:Renderizations()
+    function Buttons:CreateRenderizations()
         local Inside = Instance.new('ImageLabel', Main)
 
         Inside.Name = Random()
@@ -86,7 +86,7 @@ function Library:Main()
         Inside.Active = false
     end
 
-    function Buttons:Powerfulls()
+    function Buttons:CreatePowerfulls()
         local Bottom = Instance.new('ImageLabel', Main)
 
         Bottom.Name = Random()
